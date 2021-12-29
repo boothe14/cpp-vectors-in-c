@@ -3,17 +3,20 @@
 
 #include "vector.h"
 
+typedef unsigned long int veeeery_long_name;
+typedef const_charp const char*;
+vector_impl(veeeery_long_name);
+vector_impl(const_charp);
+
 int main()
 {
-    typedef char str;
-    vector(str) vec = str_vector_new();
+    vector(const_charp) const_charp_vector_new();
     // Must typedef pointer types and types with spaces inbetween words, such as unsigned int.
     // strings still not supported yet, will add them very soon if possible
 
-    typedef unsigned long int long_unsigned_int_wow;
-    vector(long_unsigned_int_wow) u_vec = long_unsigned_int_wow_vector_new();
-    long_unsigned_int_wow_vector_push_back(u_vec, 5);
-    // Wow! still works!
+    vector(veeeery_long_name) u_vec = veeeery_long_name_vector_new();
+    veeeery_long_name_vector_push_back(u_vec, 5);
+    // Wow! this works!
     
 
     return 0;

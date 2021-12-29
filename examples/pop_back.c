@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "vector.h"
 
+vector_impl(float);
+
 int main()
 {
     vector(float) vec = float_vector_new();
